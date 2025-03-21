@@ -1,0 +1,83 @@
+<!-- 500.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>500 - Server Error</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+  <style>
+    .error-container {
+      padding: 100px 0;
+      text-align: center;
+    }
+    .error-code {
+      font-size: 120px;
+      color: #d70036;
+      margin-bottom: 30px;
+    }
+    .error-message {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .error-details {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <span>
+              Map Scraper
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <div class="error-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="error-code">500</div>
+          <div class="error-message">Server Error</div>
+          <div class="error-details">We're experiencing some technical difficulties. Please try again later.</div>
+          <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#">Google Maps Scraper</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script>
+    document.getElementById("displayYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

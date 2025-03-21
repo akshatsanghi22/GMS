@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="">
+
+  <title>Google Maps Scraper - Services</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="{{ url_for('static', filename='images/hero-bg.png') }}" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <span>
+              Map Scraper
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="{{ url_for('index') }}">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}"> About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('service') }}">Services <span class="sr-only">(current)</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('why') }}">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('team') }}">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+              </li>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Our <span>Services</span>
+          </h2>
+          <p>
+            Comprehensive Google Maps data extraction services for businesses and researchers
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s1.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Business Data Extraction
+                </h5>
+                <p>
+                  Extract comprehensive business information from Google Maps including names, addresses, phone numbers, websites, business hours, and more to build valuable databases.
+                </p>
+                <a href="#business-data">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s2.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Review Analysis
+                </h5>
+                <p>
+                  Gather and analyze customer reviews and ratings from Google Maps to understand business reputation and customer satisfaction for your target locations.
+                </p>
+                <a href="#review-analysis">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s3.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Competitor Research
+                </h5>
+                <p>
+                  Analyze competitor information, including locations, ratings, reviews, and services offered to gain insights and make strategic business decisions.
+                </p>
+                <a href="#competitor-research">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <a href="{{ url_for('index') }}#scraper-section">
+            Try Our Scraper
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- detailed services section -->
+  <section class="about_section layout_padding" id="business-data">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Business Data <span>Extraction</span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              Comprehensive Business Information
+            </h3>
+            <p>
+              Our Google Maps scraper allows you to extract detailed business information for any location or category. This data is invaluable for market research, lead generation, and business development.
+            </p>
+            <p>
+              <strong>Data points include:</strong>
+            </p>
+            <ul>
+              <li>Business name and category</li>
+              <li>Full address and location coordinates</li>
+              <li>Contact information (phone, email, website)</li>
+              <li>Operating hours</li>
+              <li>Popular times data</li>
+              <li>Attributes and amenities</li>
+              <li>Photos and image URLs</li>
+            </ul>
+            <p>
+              This data can be exported in various formats (CSV, JSON, Excel) for easy integration with your existing tools and workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about_section layout_padding bg-light" id="review-analysis">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Review <span>Analysis</span>
+        </h2>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box text-dark">
+            <h3>
+              Understand Customer Sentiment
+            </h3>
+            <p class="text-dark">
+              Customer reviews provide valuable insights into business reputation and customer satisfaction. Our scraper extracts detailed review data from Google Maps to help you understand what customers are saying.
+            </p>
+            <p class="text-dark">
+              <strong>Review data includes:</strong>
+            </p>
+            <ul class="text-dark">
+              <li>Overall rating and number of reviews</li>
+              <li>Individual review text and ratings</li>
+              <li>Reviewer information and dates</li>
+              <li>Review responses from business owners</li>
+              <li>Rating distribution</li>
+            </ul>
+            <p class="text-dark">
+              This data can help you identify trends, monitor customer satisfaction, and make data-driven improvements to your business.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about_section layout_padding" id="competitor-research">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Competitor <span>Research</span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              Gain Competitive Insights
+            </h3>
+            <p>
+              Understanding your competitors is crucial for business success. Our Google Maps scraper helps you gather detailed information about competitors in your industry or location.
+            </p>
+            <p>
+              <strong>Competitive insights include:</strong>
+            </p>
+            <ul>
+              <li>Competitor location mapping and density</li>
+              <li>Service and product offerings</li>
+              <li>Customer ratings and review sentiment</li>
+              <li>Business hours and peak times</li>
+              <li>Special features and amenities</li>
+            </ul>
+            <p>
+              This competitive intelligence can inform your business strategy, help identify market gaps, and provide opportunities for differentiation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end detailed services section -->
+
+  <!-- Additional services section -->
+  <section class="service_section layout_padding bg-light">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Additional <span>Services</span>
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s1.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Custom Scraping Solutions
+                </h5>
+                <p>
+                  Need specialized data extraction? We can develop custom scraping solutions tailored to your specific business requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s2.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Data Analysis & Visualization
+                </h5>
+                <p>
+                  Transform raw scraped data into actionable insights with our data analysis and visualization services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='images/s3.png') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  API Integration
+                </h5>
+                <p>
+                  Integrate our Google Maps scraping capabilities directly into your applications with our API solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end additional services section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Contact
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  123 Main Street, Your City
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  contact@mapscraper.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              Our Google Maps scraper provides businesses with valuable location data for market research, lead generation, and competitive analysis.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="" href="{{ url_for('index') }}">
+                Home
+              </a>
+              <a class="" href="{{ url_for('about') }}">
+                About
+              </a>
+              <a class="active" href="{{ url_for('service') }}">
+                Services
+              </a>
+              <a class="" href="{{ url_for('why') }}">
+                Why Us
+              </a>
+              <a class="" href="{{ url_for('team') }}">
+                Team
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#">Google Maps Scraper</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("displayYear").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>
